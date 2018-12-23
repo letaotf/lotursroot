@@ -1,0 +1,6 @@
+#spring，这里不要指定active profile,本地启动在IDEA里设置active profile为local
+spring:
+  application:
+    name: lotusroot
+  profiles:
+    active: local

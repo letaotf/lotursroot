@@ -11,7 +11,7 @@ public class LotusrootWebApplication {
 
 	@RequestMapping("/")
 	public String index(){
-		return "Hello world";
+		return "我是测试数据";
 	}
 
 	public static void main(String[] args) {
