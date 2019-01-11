@@ -25,6 +25,7 @@
 		<module>lotusroot-core</module>
 		<module>lotusroot-web</module>
 		<module>lotusroot-test</module>
+		<module>lotusroot-dal</module>
 	</modules>
 
 </project>
