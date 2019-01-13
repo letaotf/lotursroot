@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<lotusroot.api.version>0.0.1-SNAPSHOT</lotusroot.api.version>
+		<aspectj.version>1.9.1</aspectj.version>
 	</properties>
 
 	<modules>
