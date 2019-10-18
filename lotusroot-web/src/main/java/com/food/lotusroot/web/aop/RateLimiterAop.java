@@ -52,6 +52,7 @@ public class RateLimiterAop {
      */
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+        log.info("环绕增强");
         //根据java反射的原理获取RateLimiterExt注解所在的方法
         MethodSignature methodSignature = (MethodSignature)joinPoint.getSignature();
         RateLimiterExt ext = methodSignature.getMethod().getDeclaredAnnotation(RateLimiterExt.class);

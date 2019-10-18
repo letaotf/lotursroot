@@ -25,7 +25,6 @@ public class HelloController {
      @GetMapping("")
      @RateLimiterExt
      public String getHello(){
-         log.info("我是乐陶，你来啊");
          return "我是乐陶，你来啊";
      }
 
