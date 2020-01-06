@@ -8,7 +8,7 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://127.0.0.1:3306/db_webcast?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://94.191.120.27:3306/db_test?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     # 使用druid数据源
