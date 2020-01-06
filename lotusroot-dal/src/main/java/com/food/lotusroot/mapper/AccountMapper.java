@@ -2,6 +2,7 @@ package com.food.lotusroot.mapper;
 
 import com.food.lotusroot.dal.Account;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ import java.util.List;
 public interface AccountMapper {
 
     List<Account> selectAll(Long accountId);
+
+    List<Account> selectAllPage(RowBounds rowBounds);
 }

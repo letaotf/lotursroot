@@ -29,4 +29,9 @@ public class AccountController {
     public List<Account> queryAccount(Long accountId){
         return accountService.selectAll(accountId);
     }
+
+    @GetMapping("/page.json")
+    public List<Account> queryAccount(Integer pageNo,Integer pageSize){
+        return accountService.selectAllPage(pageNo,pageSize);
+    }
 }

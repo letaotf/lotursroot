@@ -2,6 +2,7 @@ package com.food.lotusroot.core;
 
 import com.food.lotusroot.core.service.AccountService;
 import com.food.lotusroot.dal.Account;
+import com.food.lotusroot.manager.AccountManager;
 import com.food.lotusroot.mapper.AccountMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,10 +20,15 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService{
 
     @Autowired
-    private AccountMapper accountMapper;
+    private AccountManager accountManager;
 
     @Override
     public List<Account> selectAll(Long accountId) {
-        return accountMapper.selectAll(accountId);
+        return accountManager.selectAll(accountId);
+    }
+
+    @Override
+    public List<Account> selectAllPage(Integer pageNo, Integer pageSize) {
+        return accountManager.selectAllPage(pageNo,pageSize);
     }
 }

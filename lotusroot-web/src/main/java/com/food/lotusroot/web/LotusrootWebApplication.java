@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@ComponentScan(basePackages = {"com.food.lotusroot.dal", "com.food.lotusroot.core", "com.food.lotusroot.web"})
+@ComponentScan(basePackages = {"com.food.lotusroot.dal", "com.food.lotusroot.core", "com.food.lotusroot.web","com.food.lotusroot.manager"})
 @MapperScan(basePackages = "com.food.lotusroot.mapper")
 public class LotusrootWebApplication {
 
