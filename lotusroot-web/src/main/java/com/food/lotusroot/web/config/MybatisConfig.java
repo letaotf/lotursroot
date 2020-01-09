@@ -1,12 +1,11 @@
 package com.food.lotusroot.web.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * <p>mybatis的配置</p >
@@ -16,12 +15,18 @@ import javax.sql.DataSource;
  * @since V1.0
  */
 @Configuration
-@MapperScan("com.food.lotusroot.dal.mapper")
+@MapperScan("com.food.lotusroot.mapper")
+@ComponentScan(basePackages = {"com.food.lotusroot.dal", "com.food.lotusroot.core", "com.food.lotusroot.web","com.food.lotusroot.manager"})
+@EnableTransactionManagement
 public class MybatisConfig {
 
+    /**
+     * 配置分页插件
+     * @return
+     */
     @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource dataSource(){
-        return new DruidDataSource();
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
     }
+
 }

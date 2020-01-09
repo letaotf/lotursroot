@@ -1,14 +1,10 @@
 package com.food.lotusroot.web.controller;
 
 import com.food.lotusroot.core.service.AccountService;
-import com.food.lotusroot.dal.Account;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * <p>描述</p >
@@ -20,18 +16,18 @@ import java.util.List;
 @RestController
 @RequestMapping("account")
 @Slf4j
-public class AccountController {
+public class AccountController{
 
     @Autowired
     private AccountService accountService;
 
-    @GetMapping("/queryAccount.json")
-    public List<Account> queryAccount(Long accountId){
-        return accountService.selectAll(accountId);
-    }
-
-    @GetMapping("/page.json")
-    public List<Account> queryAccount(Integer pageNo,Integer pageSize){
-        return accountService.selectAllPage(pageNo,pageSize);
-    }
+//    @GetMapping("/queryAccount.json")
+//    public List<Account> queryAccount(Long accountId){
+//        return accountService.selectAll(accountId);
+//    }
+//
+//    @GetMapping("/page.json")
+//    public List<Account> queryAccount(Integer pageNo,Integer pageSize){
+//        return accountService.selectAllPage(pageNo,pageSize);
+//    }
 }

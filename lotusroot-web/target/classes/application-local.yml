@@ -28,6 +28,21 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
 
-mybatis:
+#mybatis 配置
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    refresh: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
   mapper-locations: classpath:mapper/**/*Mapper.xml
   type-aliases-package: com.food.lotusroot.mapper

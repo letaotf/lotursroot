@@ -2,7 +2,6 @@ package com.food.lotusroot.manager;
 
 import com.food.lotusroot.dal.Account;
 import com.food.lotusroot.mapper.AccountMapper;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,8 +25,4 @@ public class AccountManagerImpl implements AccountManager{
         return accountMapper.selectAll(accountId);
     }
 
-    @Override
-    public List<Account> selectAllPage(Integer pageNo,Integer pageSize) {
-        return accountMapper.selectAllPage(new RowBounds(pageNo,pageSize));
-    }
 }

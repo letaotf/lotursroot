@@ -14,6 +14,4 @@ import java.util.List;
 public interface AccountManager {
 
     List<Account> selectAll(Long accountId) ;
-
-    List<Account> selectAllPage(Integer pageNo,Integer pageSize);
 }
